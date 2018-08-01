@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+
+	<template id="x_custom_delivery_slip" name="custom_delivery_slip" inherit_id="stock.report_delivery_document">
+		<xpath expr="//div[last()]" position="after">
+			<t t-if="o.company_id.name == 'Miller Rentals Inc'">
+				<div class="custom_delivery_slip notice_sign_container">
+					<div class="grey_rounded_border_box">
+						<h5>Rental Agreement And Notices</h5>
+						<div class="agreement_text">
+<p >This is a contract agreement of renting only and not of sale. The containers shall not be moved from the property where they were delivered without the express written consent of MILLER RENTALS, INC. - If any container is moved without the consent of MILLER RENTALS, INC. we shall have the legal right to immediately terminate the rental of said container and to immediately retake the container that was moved. Lessee shall pay to MILLER RENTALS, INC. the cost of renting each container within ten (10) days of billing. If rent is not paid in this timely manner, MILLER RENTALS, INC. shall have the right to retake possession of all said containers. Lessee will be responsible for any damages beyond the normal wear and tear on said containers. MILLER RENTALS, INC. is not responsible for accidents or injuries caused directly or indirectly in the use of rented containers. Lessee shall pay to MILLER RENTALS, INC. the cost of repair to any container returned in a damaged condition.</p>
+<p><b>Notice</b>: This is not a notice that the undersigned has not been paid in full for the rental of said containers furnished or to be furnished, but a notice required by law, so that MILLER RENTALS, INC. may, at a future date, claim a mechanic's lien leading to the loss, through court proceedings, of all or any part of the property mentioned above being so improved may be placed against the property even though you have paid the contractor in full. You may protect yourself by (a) requiring the contractor to furnish a signed release by the person(s) or firm giving you this notice before making payment, or, (b) any other release(s), methods or devisees which is suitable under these conditions. Lessee shall indemnify and hold MILLER RENTALS, INC. harmless from and claims of third parties or loss, injury and damage to their persons or property arising out of Lessee's possession and us of said container, including legal costs incurred in defense of such claims. Lessee shall pay reasonable attorneys fees and costs incurred in enforcing the terms and conditions hereof.</p>
+<p><b>Notice</b>: Our drivers will make every effort to place said container where customer designates, but MILLER RENTALS, INC. assumes NO responsibility for damages inside curb of property line.</p> 
+						</div>
+						<div class="input_boxes_div">
+							<input class="input_box_lrg" type="text" placeholder="Accepted By"/>
+							<input class="input_box_med" type="text" placeholder="For"/>
+							<input class="input_box_med" type="text" placeholder="Driver"/>
+							<input class="input_box_sml" type="text" placeholder="Date"/>
+						</div>
+					</div>
+				</div>
+			</t>
+		</xpath>
+	</template>
+
+</data>
+</odoo>
