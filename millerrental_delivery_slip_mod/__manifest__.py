@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "millerrental_delivery_slip_mod",
+    'name': "Millerrental Delivery Reports",
 
     'summary': "Adding agreement/signature to delivery slip",
 
