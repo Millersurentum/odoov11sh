@@ -8,6 +8,6 @@ class AccountInvoiceLine(models.Model):
     _inherit = "account.invoice.line"
 
     bin_line = fields.Char(string="Bin #")
-    po = fields.Char(string="PO #")
+    line_po = fields.Char(string="PO #")
     start_date = fields.Date(string="Start Date")
     end_date = fields.Date(string="End Date")

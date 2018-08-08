@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
             <xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='product_id']" position="before">
                 <field name="bin_line"/>
-                <field name="po"/>
+                <field name="line_po"/>
             </xpath>
             <xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='account_id']" position="after">
                 <field name="start_date"/>

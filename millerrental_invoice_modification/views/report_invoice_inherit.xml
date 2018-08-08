@@ -15,7 +15,7 @@
                 </td>
             </xpath>
             <xpath expr="//tbody[hasclass('invoice_tbody')]/tr[@t-foreach='o.invoice_line_ids']//span[@t-field='l.name']/.." position="before">
-                <td><span t-field="l.po"/></td>
+                <td><span t-field="l.line_po"/></td>
             </xpath>
             <xpath expr="//tbody[hasclass('invoice_tbody')]//td[@t-translation='off']" position="before">
                 <td></td>
