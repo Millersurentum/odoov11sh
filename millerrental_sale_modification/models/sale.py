@@ -19,6 +19,15 @@ class SaleOrder(models.Model):
             line.end_date = line.order_id.end_date
             line._get_product_qty(line.start_date, line.end_date)
 
+    @api.multi
+    def action_confirm(self):
+        self.ensure_one()
+        res = super(SaleOrder, self).action_confirm()
+        for line in self.order_line:
+            move = line.env['stock.move'].search([('sale_line_id', '=', line.id), ('created_purchase_line_id', '!=', False)], limit=1)
+            line.po = move.created_purchase_line_id.order_id.name
+        return res
+
 
 class SaleOrderLine(models.Model):
     _inherit = "sale.order.line"
