@@ -25,7 +25,7 @@ class SaleOrder(models.Model):
         res = super(SaleOrder, self).action_confirm()
         for line in self.order_line:
             move = line.env['stock.move'].search([('sale_line_id', '=', line.id), ('created_purchase_line_id', '!=', False)], limit=1)
-            line.po = moves.created_purchase_line_id.order_id.name
+            line.po = move.created_purchase_line_id.order_id.name
         return res
 
 
