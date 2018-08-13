@@ -42,7 +42,7 @@ class SaleOrderLine(models.Model):
         delta = to_date - from_date
         self.product_uom_qty = delta.days
 
-    @api.onchange('product_id', 'start_date', 'end_date', 'order_id.start_date')
+    @api.onchange('product_id', 'start_date', 'end_date')
     def _compute_qty(self):
         for line in self:
             line._get_product_qty(line.start_date, line.end_date)
