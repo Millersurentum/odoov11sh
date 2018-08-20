@@ -14,7 +14,7 @@ product on the Sale Order lines needs to be populated based on the date values e
     'website': "http://www.odoo.com",
     'category': 'Account',
     'version': '0.1',
-    'depends': ['sale_management'],
+    'depends': ['sale_subscription'],
     'data': [
         'views/sale_report_inherit.xml',
         'views/sale_views.xml',
