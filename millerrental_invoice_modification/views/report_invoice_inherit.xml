@@ -27,6 +27,9 @@
         </template>
 
         <template id="report_invoice_document_inherit_sale_miller" inherit_id="sale.report_invoice_document_inherit_sale">
+            <xpath expr="//div[@name='invoice_address']" position="attributes">
+                <attribute name="groups">!sale.group_delivery_invoice_address</attribute>
+            </xpath>
             <xpath expr="//div[@t-field='o.partner_shipping_id']/../.." position="replace">
             </xpath>
             <xpath expr="//div[@t-field='o.partner_id']/../.." position="replace">
