@@ -46,4 +46,6 @@ class SaleOrderLine(models.Model):
     @api.onchange('product_id', 'start_date', 'end_date')
     def _compute_qty(self):
         for line in self.filtered(lambda l: l.product_id.recurring_invoice):
+            line.start_date = line.order_id.start_date
+            line.end_date = line.order_id.end_date
             line._get_product_qty(line.start_date, line.end_date)
