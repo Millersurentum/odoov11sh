@@ -12,7 +12,7 @@
     'website': "http://www.odoo.com",
     'category': 'Account',
     'version': '0.1',
-    'depends': ['account_accountant', 'purchase'],
+    'depends': ['account_accountant', 'purchase', 'sale'],
     'data': [
         'views/account_views.xml',
         'views/report_invoice_inherit.xml',
